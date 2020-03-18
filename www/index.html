@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>valuta calculator</title>
+</head>
+<body>
+    <div class="app">
+        <h1>PhoneGap</h1>
+        <div class="jumbotron">
+            <div class="container">
+                <h2>Currency Calculator</h2>
+                <p class="lead">Convert the currency</p>
+                <form class="form-inline">
+                    <div class="form-group mb-2">
+                        <input type="number" class="form-control" id="amount"/>
+                    </div>
+                    <div class="form-group mx-sm-3 mb-2">
+                        <select class="form-control" id="currency-1" required>
+                            <option>PLN</option>
+                            <option>EUR</option>
+                            <option>USD</option>
+                        </select>
+                    </div>
+                    <div class="form-group mx-sm-3 mb-2">
+                        <label>convert to</label>
+                        <select class="form-control" id="currency-2" required>
+                            <option>EUR</option>
+                            <option>USD</option>
+                            <option>PLN</option>
+                        </select>
+                    </div>
+                    <button class="btn calculate-btn btn-primary mb-2">Show me the result!</button>
+                </form>
+                <div class="result">
+                    <p>
+                        <span class="given-amount"></span>
+                        <span class="base-currency"></span>
+                        <span class="final-result"></span>
+                        <span class="second-currency"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>
